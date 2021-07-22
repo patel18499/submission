@@ -1,0 +1,133 @@
+<div class="bgColor">
+    <div class="container-fluid pt-2">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="assets/banner.jpg" alt="First slide">
+              <span class="bannerCentered">Choosing The Right Nutrition</span>
+              <p class="parCentered text-center">With an emphasis on Organic and Local, we do as little conventional shopping as possible. We are always open to suggestions.</p>
+              <button type="button" class="btn btnBg px-3">READ MORE</button>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="assets/banner3.jpg" alt="First slide">
+              <span class="bannerCentered">Health Nutrition</span>
+              <p class="parCentered text-center">Emperor angelfish ziege aholehole, "amago flathead catfish Alaska blackfish jawfish silver carp," wormfish scabbard fish opaleye.</p>
+              <button type="button" class="btn btnBg px-3">READ MORE</button>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+  </div>
+  <div class="container-fluid mb-4">
+      <div class="container">
+          <div class="row justify-content-center catCLS">
+              <div class="col bgimg1 parent mx-2 px-2" style="cursor: pointer;" (click)="fnProduct('Premium')">
+                  <img src="assets/banner-8.jpg" class="child img-fluid" alt="No Image">
+                  <span class="centered">Premium</span>
+              </div>
+              <div class="col bgimg2 parent mx-2 px-2" style="cursor: pointer;" (click)="fnProduct('Tamilnadu')">
+                  <img src="assets/category.jpg" class="child img-fluid" alt="No Image">
+                  <span class="centered">Tamilnadu</span>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="container-fluid my-5">
+      <div class="container">
+          <div class="row justify-content-center">
+              <img src="assets/small-leaf.png" class="img-fluid">
+              <div class="col-lg-12 text-center">
+                  <h1 class="mb-4">Best Sellers Products</h1>
+                  <p style="color: gray;">We support environmental awareness, just business practices, and<br> health, and our selections illustrate that.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="container-fluid py-3">
+      <div class="row">
+          <div class="col-md-12">
+              <section id="news-update-section" class="news-update-section sec-ptb-50 clearfix">
+                  <div class="container my-4 my-xs">
+                      <div class="row">
+                          <div class="col-lg-12">
+                              <div class="row">
+  
+                                  
+  
+                              </div>
+                          </div>
+  
+                          <div class="col-lg-12 p-0 m-0">
+                              <div class="row p-0 m-0" *ngIf="productsArr">
+                                  <div class="col-md-3 mb-4 parent" *ngFor="let prod of productsArr;let i = index;" data-aos="zoom-in">
+                                      <div class="row p-0 m-0" style="border:1px solid gray;">
+                                          <div class="col-md-12 p-3" style="background-color: white;">
+                                              <img [src]="prod.img" width="100%" height="100%" class="child">
+                                          </div>
+                                      </div>
+                                      <div class="row mt-2">
+                                          <div class="col-md-12 ml-1 text-truncate fs18">
+                                              <strong>{{prod.p_name}}</strong>
+                                          </div>
+                                          <div class="col-md-12">
+                                              <p class="mb-0 ml-1 fs14">Price: <strong>INR {{prod.p_cost ? fnGetLocalFormat(prod.p_cost) : '0'}}</strong></p>
+                                              <p class="mb-0 ml-1 fs14">Category: {{prod.p_category ? prod.p_category : '-'}} units</p>
+                                              <p class="mb-0 ml-1 fs14">Description: {{prod.p_details ? prod.p_details : '-'}}</p>
+                                              <p class="py-1 ml-1 m-0">Available Quantity<strong> {{prod.p_availability}} pieces</strong></p>
+  
+                                              <div class="my-1 col px-0 text-center">
+                                                  <button class="btn1" type="button" [ngClass]="{'btnSecondaryDisabled1':(quantity.qun < 0) || (quantity.qun == 0),'btnSecondary':(quantity.qun > 0)}" [disabled]="(quantity.qun < 0) || (quantity.qun == 0)" (click)="fnDecrease(prod,i)"> - </button>
+                                                  <input type="text" class="inputClass" [name]="quantity.qun" [(ngModel)]="quantity.qun" #quantity.qun="ngModel" >
+                                                  <!-- <div>{{prod.p_availability}}</div> -->
+                                                  <button type="button" class="btn1 btnSecondary" [ngClass]="{'btnSecondaryDisabled1':(quantity.qun == prod.p_availability) ,'btnSecondary':(quantity.qun < prod.p_availability)}" (click)="fnIncrease(prod,i)" [disabled]="(quantity.qun == prod.p_availability)"> + </button>
+                                              </div>
+                                              <button type="button" class="btn btn-success d-block col my-2" (click)="fnAddProduct(prod)" data-toggle="modal" data-target="#exampleModal">ADD TO CART</button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      
+                  </div>
+              </section>
+  
+          </div>
+      </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{oneProduct.p_name}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+              <div class="col-lg-6 pr-2">
+                <img [src]="oneProduct.img" width="100%" height="100%" class="img-fluid">
+              </div>
+              <div class="col-lg-6">
+                <p class="mb-0 ml-1 fs14">Price: <strong>INR {{oneProduct.p_cost ? fnGetLocalFormat(oneProduct.p_cost) : '0'}}</strong></p>
+                <p class="mb-0 ml-1 fs14">Category: {{oneProduct.p_category ? oneProduct.p_category : '-'}} units</p>
+                <p class="mb-0 ml-1 fs14">Description: {{oneProduct.p_details ? oneProduct.p_details : '-'}}</p>
+                <p class="py-1 ml-1 m-0">Available Quantity<strong> {{oneProduct.p_availability}} pieces</strong></p>
+              </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

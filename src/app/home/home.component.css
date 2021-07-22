@@ -1,0 +1,240 @@
+.child {
+    transition: transform .2s;
+}
+
+.bgColor {
+    background-color: #F2F2F2;
+}
+
+.centered {
+
+    position: absolute;
+    color: black;
+    width: 100%;
+    padding: 20px;
+    z-index: 1;
+    display: block;
+    margin-top: -90px;
+    margin-left: 20px;
+    font-size: 40px;
+    font-weight: 620;
+    line-height: 1.2em;
+  }
+
+  .bannerCentered {
+    position: absolute;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 0px;
+    z-index: 1;
+    display: block;
+    margin-top: -422px;
+    margin-left: 20px;
+    font-size: 56px;
+    font-weight: 620;
+    line-height: 1.2em;
+  }
+
+  .parCentered {
+    position: absolute;
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 40px 300px 0px 303px;
+    z-index: 1;
+    display: block;
+    margin-top: -338px;
+    margin-left: 20px;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 1.2em;
+  }
+
+  .btnBg {
+    background-color: #fa6c47;
+    position: absolute;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    display: block;
+    margin-top: -153px;
+    margin-left: 666px;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 1.2em;
+  }
+
+.parent:hover .child,
+.parent:focus .child {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+@media screen  and (max-width: 767px) {
+    .mt-xs{
+    margin-top: 3rem!important;
+    }
+    .my-xs{
+    margin-top: 3rem !important;
+    margin-bottom:3rem !important;
+    }
+    .btn-search-sm{
+        padding: .25rem .5rem;
+        font-size: .875rem;
+        line-height: 1.5;
+        border-radius: .2rem;
+    }
+}
+
+.bgDefaultGray {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.fs18 {
+    font-size: 18px;
+}
+
+.btnSecondary {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background: #eeeeef;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.bgLightDanger {
+    display: inline-block;
+    background: rgba(250, 158, 0, 0.1);
+    padding: 4px 8px;
+    margin-top: 2px;
+    border-radius: 2px;
+}
+
+.btnSecondaryDisabled {
+    display: inline-block;
+    height: 40px;
+    background: #eeeeef;
+    text-align: center;
+    color: black;
+    cursor: default;
+    pointer-events: none;
+}
+
+.btnSecondaryDisabled1 {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background: #eeeeef;
+    text-align: center;
+    color: black;
+    cursor: default;
+    pointer-events: none;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.btnSecondary:hover {
+    background: #ffffff;
+    color: #ff3e00;
+    -webkit-box-shadow: 0px 0px 0px 1px #ff3e00 inset;
+    box-shadow: 0px 0px 0px 1px #ff3e00 inset;
+}
+
+.btnSecondary.disable:hover {
+    background: #eeeeef !important;
+    pointer-events: none !important;
+    cursor: default !important;
+}
+
+.inputClass {
+    width: 150px;
+    padding: 0px;
+    font-size: 14px;
+    height: 40px;
+    text-align: center;
+    box-shadow: none;
+    outline: none;
+    color: #282c3f;
+    vertical-align: top;
+    border: none;
+    display: inline-block;
+    /* background: #f5f5f8 !important; */
+}
+
+
+/* Colors's private CSS styles */
+
+.colors {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+}
+
+.colors li {
+    cursor: pointer;
+}
+
+.colors li:hover {
+    -webkit-box-shadow: 0px 0px 0px 1px #ff3e00 inset;
+    box-shadow: 0px 0px 0px 1px #ff3e00 inset;
+}
+
+.colors li.selected {
+    -webkit-box-shadow: 0px 0px 0px 1px #ff3e00 inset;
+    box-shadow: 0px 0px 0px 1px #ff3e00 inset;
+}
+
+.colors li.selected:hover {
+    -webkit-box-shadow: 0px 0px 0px 1px #ff3e00 inset;
+    box-shadow: 0px 0px 0px 1px #ff3e00 inset;
+}
+
+.colors .badge {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+}
+
+.btn1 {
+    border: none;
+    cursor: pointer!important;
+    /* background: 0 0; */
+    text-decoration: none!important;
+    display: inline-block;
+}
+
+.bgColor {
+    background-color: #eeeeef;
+}
+
+.fs16 {
+    font-size: 16px;
+}
+
+.fs14 {
+    font-size: 14px;
+}
+
+.bannerCLS {
+
+}
+
+.catCLS {
+    margin-top: 40px;
+}
+
+
+/* @media screen  and (max-width: 575) {
+    .col-4 , .col-8{
+        padding-right: 0px !important;
+    }
+} */
+
+
